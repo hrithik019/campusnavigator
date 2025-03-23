@@ -1,10 +1,11 @@
+
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "outline" | "ghost";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "gradient";
   size?: "sm" | "md" | "lg";
   to?: string;
   fullWidth?: boolean;
@@ -19,13 +20,14 @@ const CustomButton: React.FC<ButtonProps> = ({
   fullWidth = false,
   ...props
 }) => {
-  const baseStyles = "font-medium rounded-lg transition-all duration-200 flex items-center justify-center";
+  const baseStyles = "font-medium rounded-xl transition-all duration-200 flex items-center justify-center shadow-sm";
   
   const variantStyles = {
     primary: "bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800",
     secondary: "bg-gray-100 text-gray-800 hover:bg-gray-200 active:bg-gray-300",
     outline: "bg-transparent border border-gray-300 text-gray-800 hover:bg-gray-50",
     ghost: "bg-transparent text-gray-800 hover:bg-gray-100",
+    gradient: "bg-gradient-primary text-white hover:shadow-lg hover:shadow-blue-500/25 active:opacity-90",
   };
   
   const sizeStyles = {

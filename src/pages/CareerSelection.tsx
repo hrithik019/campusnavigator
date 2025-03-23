@@ -57,13 +57,13 @@ const CareerSelection: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-white">
       <NavBar />
       
       <main className="flex-grow pt-32 pb-20 px-6 md:px-12">
         <div className="max-w-4xl mx-auto animate-fade-in">
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h1 className="text-3xl md:text-4xl font-bold text-gradient">
               What career path interests you?
             </h1>
             <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
@@ -77,7 +77,7 @@ const CareerSelection: React.FC = () => {
                 key={career.id}
                 onClick={() => setSelectedCareer(career.id)}
                 className={`cursor-pointer transition-all duration-300 transform hover:-translate-y-1 ${
-                  selectedCareer === career.id ? "ring-2 ring-blue-500" : ""
+                  selectedCareer === career.id ? "ring-2 ring-blue-600 shadow-lg shadow-blue-500/20" : ""
                 }`}
               >
                 <BlurCard className="relative h-full">
@@ -104,6 +104,7 @@ const CareerSelection: React.FC = () => {
             <CustomButton 
               onClick={handleContinue}
               disabled={!selectedCareer}
+              variant="gradient"
               size="lg"
               className="gap-2"
             >
