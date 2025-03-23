@@ -1,10 +1,9 @@
-
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
 import BlurCard from "@/components/ui/BlurCard";
-import Button from "@/components/ui/Button";
+import CustomButton from "@/components/ui/CustomButton";
 import { Search, Filter, Star, MapPin, Building, Users, Banknote } from "lucide-react";
 
 interface LocationState {
@@ -122,7 +121,6 @@ const CollegeList: React.FC = () => {
           </div>
           
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Filters Sidebar */}
             <div className="lg:w-64 shrink-0">
               <BlurCard className="sticky top-24">
                 <div className="flex items-center mb-6">
@@ -229,12 +227,11 @@ const CollegeList: React.FC = () => {
                     </div>
                   </div>
                   
-                  <Button variant="outline" className="w-full">Apply Filters</Button>
+                  <CustomButton variant="outline" className="w-full">Apply Filters</CustomButton>
                 </div>
               </BlurCard>
             </div>
             
-            {/* College List */}
             <div className="flex-grow">
               {loading ? (
                 <div className="flex flex-col items-center py-12">
@@ -309,15 +306,15 @@ const CollegeList: React.FC = () => {
                           </div>
                           
                           <div className="flex justify-end">
-                            <Button 
+                            <CustomButton 
                               variant="outline" 
                               className="mr-3"
                             >
                               Compare
-                            </Button>
-                            <Button>
+                            </CustomButton>
+                            <CustomButton>
                               View Details
-                            </Button>
+                            </CustomButton>
                           </div>
                         </div>
                       </div>

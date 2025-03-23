@@ -1,10 +1,9 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
 import BlurCard from "@/components/ui/BlurCard";
-import Button from "@/components/ui/Button";
+import CustomButton from "@/components/ui/CustomButton";
 import { Eye, EyeOff, UserPlus } from "lucide-react";
 
 const Signup: React.FC = () => {
@@ -165,7 +164,7 @@ const Signup: React.FC = () => {
                 </label>
               </div>
               
-              <Button 
+              <CustomButton 
                 type="submit" 
                 fullWidth 
                 size="lg"
@@ -185,7 +184,7 @@ const Signup: React.FC = () => {
                     Create Account <UserPlus size={18} />
                   </>
                 )}
-              </Button>
+              </CustomButton>
             </form>
             
             <div className="mt-8 text-center">
