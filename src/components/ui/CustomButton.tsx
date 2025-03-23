@@ -1,4 +1,3 @@
-
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
@@ -11,7 +10,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   fullWidth?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({
+const CustomButton: React.FC<ButtonProps> = ({
   children,
   className,
   variant = "primary",
@@ -60,4 +59,4 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export default Button;
+export default CustomButton;

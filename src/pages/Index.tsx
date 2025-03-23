@@ -1,8 +1,7 @@
-
 import React, { useEffect, useRef } from "react";
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
-import Button from "@/components/ui/Button";
+import CustomButton from "@/components/ui/CustomButton";
 import BlurCard from "@/components/ui/BlurCard";
 import { ArrowRight, GraduationCap, Globe, BookOpen, Building } from "lucide-react";
 
@@ -73,12 +72,12 @@ const Index: React.FC = () => {
                   Navigate your educational journey with confidence. Discover the right college based on your aptitude, preferences, and career aspirations.
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                  <Button to="/career-selection" size="lg" className="gap-2">
+                  <CustomButton to="/career-selection" size="lg" className="gap-2">
                     Get Started <ArrowRight size={16} />
-                  </Button>
-                  <Button to="/login" variant="outline" size="lg">
+                  </CustomButton>
+                  <CustomButton to="/login" variant="outline" size="lg">
                     Log In
-                  </Button>
+                  </CustomButton>
                 </div>
               </div>
               <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-fade-in">
@@ -140,9 +139,9 @@ const Index: React.FC = () => {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
               Start your journey today and discover the best educational path tailored just for you.
             </p>
-            <Button to="/career-selection" size="lg" className="gap-2 mx-auto">
+            <CustomButton to="/career-selection" size="lg" className="gap-2 mx-auto">
               Explore Colleges <ArrowRight size={16} />
-            </Button>
+            </CustomButton>
           </div>
         </section>
       </main>

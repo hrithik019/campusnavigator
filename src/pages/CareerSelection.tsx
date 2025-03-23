@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
 import BlurCard from "@/components/ui/BlurCard";
-import Button from "@/components/ui/Button";
+import CustomButton from "@/components/ui/CustomButton";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const CareerSelection: React.FC = () => {
@@ -101,14 +101,14 @@ const CareerSelection: React.FC = () => {
           </div>
           
           <div className="mt-12 flex justify-center">
-            <Button 
+            <CustomButton 
               onClick={handleContinue}
               disabled={!selectedCareer}
               size="lg"
               className="gap-2"
             >
               Continue <ArrowRight size={18} />
-            </Button>
+            </CustomButton>
           </div>
         </div>
       </main>

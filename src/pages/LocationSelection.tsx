@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
 import BlurCard from "@/components/ui/BlurCard";
-import Button from "@/components/ui/Button";
+import CustomButton from "@/components/ui/CustomButton";
 import { MapPin, ArrowRight } from "lucide-react";
 
 interface LocationState {
@@ -56,12 +56,12 @@ const LocationSelection: React.FC = () => {
                   <p className="text-white/80 text-sm">
                     Explore top colleges and universities across India
                   </p>
-                  <Button 
+                  <CustomButton 
                     variant="primary" 
                     className="mt-4 bg-white text-gray-900 hover:bg-gray-100"
                   >
                     View Colleges
-                  </Button>
+                  </CustomButton>
                 </div>
               </BlurCard>
             </div>
@@ -86,26 +86,26 @@ const LocationSelection: React.FC = () => {
                   <p className="text-white/80 text-sm">
                     Discover international universities and global opportunities
                   </p>
-                  <Button 
+                  <CustomButton 
                     variant="primary" 
                     className="mt-4 bg-white text-gray-900 hover:bg-gray-100"
                   >
                     View Colleges
-                  </Button>
+                  </CustomButton>
                 </div>
               </BlurCard>
             </div>
           </div>
           
           <div className="mt-12 flex justify-center">
-            <Button 
+            <CustomButton 
               variant="outline" 
               onClick={() => navigate(-1)}
               size="lg"
               className="gap-2"
             >
               Back to Career Selection
-            </Button>
+            </CustomButton>
           </div>
         </div>
       </main>
