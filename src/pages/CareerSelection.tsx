@@ -57,7 +57,7 @@ const CareerSelection: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen flex flex-col">
       <NavBar />
       
       <main className="flex-grow pt-32 pb-20 px-6 md:px-12">
@@ -72,7 +72,7 @@ const CareerSelection: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {careerOptions.map((career) => (
+            {careerOptions.map((career, index) => (
               <div 
                 key={career.id}
                 onClick={() => setSelectedCareer(career.id)}
@@ -80,7 +80,10 @@ const CareerSelection: React.FC = () => {
                   selectedCareer === career.id ? "ring-2 ring-blue-600 shadow-lg shadow-blue-500/20" : ""
                 }`}
               >
-                <BlurCard className="relative h-full">
+                <BlurCard 
+                  variant={index % 2 === 0 ? "gleam" : "neuro"}
+                  className="relative h-full shimmer"
+                >
                   {selectedCareer === career.id && (
                     <div className="absolute top-4 right-4">
                       <CheckCircle2 className="text-blue-600" size={24} />
@@ -104,7 +107,7 @@ const CareerSelection: React.FC = () => {
             <CustomButton 
               onClick={handleContinue}
               disabled={!selectedCareer}
-              variant="gradient"
+              variant="gleam"
               size="lg"
               className="gap-2"
             >

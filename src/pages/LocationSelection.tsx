@@ -27,7 +27,7 @@ const LocationSelection: React.FC = () => {
       <main className="flex-grow pt-32 pb-20 px-6 md:px-12">
         <div className="max-w-4xl mx-auto animate-fade-in">
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h1 className="text-3xl md:text-4xl font-bold text-gradient">
               Where would you like to study?
             </h1>
             <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
@@ -38,9 +38,9 @@ const LocationSelection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div 
               onClick={() => handleLocationSelect("india")}
-              className="cursor-pointer transition-all duration-300 transform hover:-translate-y-2"
+              className="cursor-pointer transition-all duration-300 transform hover:-translate-y-2 shimmer"
             >
-              <BlurCard className="h-64 relative overflow-hidden group">
+              <BlurCard variant="gleam" className="h-64 relative overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10"></div>
                 <img 
                   src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
@@ -57,7 +57,7 @@ const LocationSelection: React.FC = () => {
                     Explore top colleges and universities across India
                   </p>
                   <CustomButton 
-                    variant="primary" 
+                    variant="gleam" 
                     className="mt-4 bg-white text-gray-900 hover:bg-gray-100"
                   >
                     View Colleges
@@ -68,9 +68,9 @@ const LocationSelection: React.FC = () => {
             
             <div 
               onClick={() => handleLocationSelect("abroad")}
-              className="cursor-pointer transition-all duration-300 transform hover:-translate-y-2"
+              className="cursor-pointer transition-all duration-300 transform hover:-translate-y-2 shimmer"
             >
-              <BlurCard className="h-64 relative overflow-hidden group">
+              <BlurCard variant="neuro" className="h-64 relative overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10"></div>
                 <img 
                   src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
@@ -87,7 +87,7 @@ const LocationSelection: React.FC = () => {
                     Discover international universities and global opportunities
                   </p>
                   <CustomButton 
-                    variant="primary" 
+                    variant="gleam" 
                     className="mt-4 bg-white text-gray-900 hover:bg-gray-100"
                   >
                     View Colleges
@@ -99,7 +99,7 @@ const LocationSelection: React.FC = () => {
           
           <div className="mt-12 flex justify-center">
             <CustomButton 
-              variant="outline" 
+              variant="neuro" 
               onClick={() => navigate(-1)}
               size="lg"
               className="gap-2"
