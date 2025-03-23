@@ -118,10 +118,35 @@
 
 @layer utilities {
   .glass {
-    @apply bg-white/70 backdrop-blur-lg border border-white/20;
+    @apply bg-white/80 backdrop-blur-lg border border-white/20;
   }
   
   .text-balance {
     text-wrap: balance;
+  }
+
+  .bg-gradient-blue {
+    @apply bg-gradient-to-r from-blue-500 to-blue-700;
+  }
+
+  .bg-gradient-purple {
+    @apply bg-gradient-to-r from-blue-500 to-purple-600;
+  }
+
+  .animated-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 5s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }
